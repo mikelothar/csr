@@ -1,0 +1,344 @@
+﻿/*
+Theme Name: Avada Child
+Description: Child theme for Avada theme
+Author: ThemeFusion
+Author URI: https://theme-fusion.com
+Template: Avada
+Version: 1.0.0
+Text Domain:  Avada
+*/
+
+/* TABLE CSS */
+
+#table table {
+    border:none;
+    color: var(--primary_color);
+    overflow:hidden;
+    table-layout: fixed;
+    width: 100%;
+}
+
+#table tbody {
+    overflow:hidden;
+}
+
+#table .tableizer-firstrow th {
+    color: var(--primary_color);
+    border-left:none;
+    background:none;
+    font-family:var(--h4_typography-font-family);
+    text-transform:uppercase;
+    font-weight: 800;
+    letter-spacing:1.5px;
+}
+
+#table tbody tr {
+    background:none!important;
+}
+
+#table td, #table th {
+    padding: .25em 4px!important;
+    vertical-align:middle!important;
+}
+
+#table tbody tr td {
+    font-weight: 400;
+    font-size:.8em;
+    border: 1px solid var(--primary_color);
+}
+
+#table thead tr th:first-child,
+#table tbody tr td:first-child {
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+}
+
+#table tbody tr td:empty {
+    border:none;
+    background:none!important;
+    height: 2em;
+    min-height: 2em;
+    max-height: 2em;
+}
+
+#table .tableizer-firstrow th {
+    border:none;
+}
+
+#table .tableizer-firstrow th:last-child {
+    border-right:none;
+    background-color: #FFF2D4;
+}
+
+#table tbody tr:first-child td {
+    border-top:none;
+}
+
+#table tr.tableTitleRow td {
+    border: 1px solid var(--primary_color)!important;
+    border-top:none!important;
+}
+
+#table tr.tableTitleRow td:last-child {
+    border-right:none!important;
+}
+
+#table tbody tr td:last-child {
+    border-right:none;
+    background-color: #FFF2D4;
+}
+
+
+
+#table tr.tableTitleRow {
+    background:#CCD5D1!important;
+}
+
+
+@media (min-width: 800px) {
+
+    body:before {
+        content: "desktop";
+        display: none; /* Prevent from displaying. */
+    }
+
+    #menu-csr {
+        display:none;
+    }
+
+
+    .fusion-main-menu {
+        margin-left:auto;
+    }
+
+    .fusion-header {
+        padding:0 4em!important;
+    }
+
+    .fusion-header .fusion-row {
+        display:flex;
+        align-items:center;
+        max-width:none!important;
+        padding:0!important;
+    }
+
+    .sub-menu {
+        all:unset!important;
+    }
+
+    .fusion-body .fusion-is-sticky.fusion-header-wrapper .fusion-header {
+        /* 	background:transparent!important; */
+    }
+
+    .menuModal {
+        position:fixed;
+        background: #e5eae8;
+        width:100%;
+        opacity:0;
+        pointer-events:none;
+        display:flex;
+        justify-content:space-between;
+        padding: 4em;
+        list-style-type:none;
+        letter-spacing:.75px;
+        padding-bottom:2em;
+        background-image: url(http://csr.landingpage.nu/wp-content/uploads/2020/11/indhold-1.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-origin: content-box;
+    }
+
+    .fusion-header, .fusion-header-v1 {
+        transition: background-color .5s!important;
+    }
+
+    .menuModal {
+        transition: opacity .5s;
+    }
+
+    .menuModal a {
+        color:#00523b!important;
+    }
+
+    .menuModal a:hover {
+        color:#FBBA00!important;
+    }
+
+    .modalShow {
+        opacity:1;
+        pointer-events:all;
+    }
+
+    .strictness {
+        transition: none!important;
+        background:#e5eae8!important;
+    }
+
+    .parent > a {
+        font-family: DM Serif Text;
+        font-size:1em;
+        text-transform:uppercase;
+        margin-bottom:1em;
+        display:flex;
+    }
+
+    .sub-menu a {
+        font-size:.9em;
+        font-family: Montserrat;
+        font-weight: 400;
+    }
+
+
+    /* BURGER MENU CSS */
+
+
+    .menu-btn, .menu-btn-green {
+        display: block;
+        width:2em;
+        --alternate-color:#fff;
+    }
+
+    .menu-btn:hover {
+        cursor: pointer;
+    }
+
+    .menu-btn .before,
+    .menu-btn .after {
+        background-color: var(--alternate-color);
+        content: '';
+        display: block;
+        height: 2px;
+        transition: all 200ms ease-in-out;
+    }
+
+    .menu-btn-green > div {
+        --alternate-color: #00523b;
+    }
+
+
+
+    .menu-btn .before {
+        box-shadow: 0 10px 0 var(--alternate-color);
+        margin-bottom: 18px;
+    }
+
+    .menu-btn-closed .before, .menu-btn-closed .after {
+        background-color: #00523b;
+    }
+
+    .menu-btn-closed .before {
+        box-shadow: 0 0 0 #fff;
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .menu-btn-closed .after{
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+}
+
+
+
+@media (max-width: 800px) {
+
+    .fusion-logo {
+        position: absolute!important;
+        left: 0!important;
+        right: 0!important;
+    }
+
+    .fusion-header {
+        background-color:var(--header_sticky_bg_color)!important;
+    }
+
+    .fusion-mobile-nav-holder {
+        margin-top:-2%!important;
+    }
+
+    .fusion-mobile-nav-holder span.menu-text {
+        font-family: DM Serif Text;
+        font-size: 1.25em;
+        text-transform: uppercase;
+        letter-spacing: .75px;
+        font-weight: 400;
+    }
+
+    .fusion-mobile-nav-holder a {
+        border:none!important;
+        background: none!important;
+        font-weight:400;
+        color: #00523b !important;
+        font-size:1em;
+    }
+
+    /* removes list decoration before link */
+    .fusion-mobile-menu-text-align-left li.fusion-mobile-nav-item li a::before {
+        content: ""!important;
+    }
+
+    .fusion-mobile-nav-holder > ul {
+        border: none!important;
+    }
+
+    .fusion-mobile-selector span {
+        display:none;
+
+    }
+
+    .fusion-mobile-selector {
+        background:none!important;
+        border:none!important;
+        pointer-events: none;
+    }
+
+    #mobile-menu-csr {
+        margin-top:1em;
+    }
+
+    .fusion-selector-down, .fusion-selector-down::before {
+        pointer-events:all;
+        color:#00523b !important;
+        border:none!important;
+    }
+
+    .searchform {
+        display:none;
+    }
+
+    .menuModal {
+        display:none;
+    }
+
+    body:before {
+        content: "mobile";
+        display:none;
+    }
+}
+
+
+/* IF INTERNET EXPLORER */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+    #menu-csr {
+        display:block;
+    }
+
+    .menu-text {
+        color:white;
+    }
+
+    .fusion-is-sticky .menu-text {
+        color:#00523b;
+    }
+
+    .fusion-is-sticky .fusion-dropdown-menu {
+        padding-right:48px!important;
+    }
+
+    .fusion-is-sticky .fusion-dropdown-menu:last-child {
+        padding-right:0px!important;
+    }
+}
+
